@@ -1,0 +1,24 @@
+
+
+<%-include("partials/header.ejs")%>
+
+<h1>HOME</h1>
+<p><%=para1%></p>
+
+
+ <% data.forEach(function(ip){%>
+
+       <%var y=ip.postdata.substring(0,40);%>
+        
+ 
+  <h2><%=ip.titledata%></h2>
+    <p><%=y+"...."%><a href="http://localhost:3000/post<%= ip.titledata%>" >Read more</a></p>
+  
+
+ <%});%>
+
+  
+
+  
+
+<%-include("partials/footer.ejs")%>
